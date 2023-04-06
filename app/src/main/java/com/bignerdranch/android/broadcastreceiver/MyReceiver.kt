@@ -17,6 +17,10 @@ class MyReceiver : BroadcastReceiver() {
             Intent.ACTION_BATTERY_LOW -> {
                 Toast.makeText(context, "BATTERY_LOW", Toast.LENGTH_LONG).show()
             }
+            "Clicked" ->{
+                var count = intent.getIntExtra("state",0)
+                Toast.makeText(context, "Clicked count - $count", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }
